@@ -15,8 +15,9 @@
     <meta property="og:description" content="Multi-disciplined CS Engineer & UI/UX Designer. Builds security tools (PhishRx), reading tools (Tracks), and creative music platforms.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shamontek.github.io">
-    <meta property="og:image" content="https://shamontek.github.io/assets/hero/og-hero.jpg">
+    <meta property="og:image" content="https://shamontek.github.io/og-hero.jpg">
     <meta name="twitter:card" content="summary_large_image">
+    <!-- Removed Twitter handle as it wasn't in the final checklist -->
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -47,7 +48,7 @@
         },
         {
           "@type": "CollegeOrUniversity",
-          "name": "Texas Southern University"
+          "name": "Texas Southern University",
           "url": "https://www.tsu.edu/"
         },
         {
@@ -196,17 +197,11 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
-            background-size: 200% 100%;
+            background-color: var(--color-accent);
             transition: width 0.3s ease;
-            animation: trail-flow 1.5s ease-in-out infinite;
         }
         .nav-link:hover::after {
             width: 100%;
-        }
-        @keyframes trail-flow {
-            0%, 100% { background-position: 200% 0; }
-            50% { background-position: -200% 0; }
         }
         
         /* Page Section Scroll-Triggered Fade-in (Enhanced with slide-up) */
@@ -227,11 +222,7 @@
         }
         .project-card:hover {
             transform: translateY(-8px) scale(1.02);
-            animation: silk-pulse 2s ease-in-out infinite;
-        }
-        @keyframes silk-pulse {
-            0%, 100% { box-shadow: 0 15px 30px rgba(0,0,0,0.3), 0 0 20px rgba(0,191,255,0.15); }
-            50% { box-shadow: 0 15px 30px rgba(0,0,0,0.3), 0 0 30px rgba(0,191,255,0.25); }
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 191, 255, 0.2);
         }
         
         /* Modal Backdrop */
@@ -277,11 +268,15 @@
             background-color: var(--color-base);
             border-color: var(--color-accent);
             transform: translateY(-8px);
-            animation: silk-pulse 2s ease-in-out infinite;
+            animation: pulse-glow 1.5s infinite;
         }
         .edge-card:hover .edge-icon {
             color: var(--color-accent);
             transform: scale(1.1) rotate(5deg);
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 10px rgba(0, 191, 255, 0.1); }
+            50% { box-shadow: 0 0 20px rgba(0, 191, 255, 0.3); }
         }
         
         /* Timeline Bar (Enhanced with draw-in line and pulse dot) */
@@ -615,7 +610,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Wattpad Book -->
                     <div class="bg-surface rounded-2xl p-8 flex flex-col md:flex-row gap-6">
-                        <img src="/assets/writing/if-he-wants-to.jpg" alt="If He Wants To - Book Cover" class="w-full md:w-1/3 h-auto rounded-lg shadow-lg" 
+                        <img src="/book_thumbnail.jpg" alt="If He Wants To - Book Cover" class="w-full md:w-1/3 h-auto rounded-lg shadow-lg" 
                         onerror="const fb = document.createElement('div'); fb.className = 'w-full md:w-1/3 h-64 bg-surface text-dim p-4 flex items-center justify-center text-center italic rounded-lg'; fb.innerHTML = 'Fact: Wattpad novel that grew a loyal readership, praised for its raw voice and emotional honesty.'; this.parentNode.replaceChild(fb, this);">
                         <div class="flex-1">
                             <span class="text-sm font-semibold text-accent uppercase tracking-wider">Wattpad Bestseller</span>
@@ -688,9 +683,9 @@
             <div class="mb-20">
                 <h3 class="text-3xl font-bold text-center mb-10">The Rhythm Behind the Code</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Song 1 -->
+                    <!-- Placeholder for Song 1 -->
                     <div class="bg-surface rounded-2xl p-6 text-center">
-                        <img src="https://img.youtube.com/vi/MYTpBHiju1Q/maxresdefault.jpg" alt="YAMAGUCHI Thumbnail" class="w-full h-48 object-cover rounded-lg mb-4" 
+                        <img src="/assets/music/cover-art-1.jpg" alt="Album Art 1" class="w-full h-48 object-cover rounded-lg mb-4" 
                         onerror="const fb = document.createElement('div'); fb.className = 'w-full h-48 object-cover rounded-lg mb-4 bg-base text-dim p-4 flex items-center justify-center text-center italic'; fb.innerHTML = 'Fact: My first lyrical piece—crafted to merge wordplay and rhythm into cinematic storytelling.'; this.parentNode.replaceChild(fb, this);">
                         <h4 class="text-xl font-bold mb-2">YAMAGUCHI</h4>
                         <p class="text-dim mb-4">Cinematic energy, narrative emotion.</p>
@@ -698,9 +693,9 @@
                             Listen on YouTube
                         </a>
                     </div>
-                    <!-- Song 2 -->
+                    <!-- Placeholder for Song 2 -->
                     <div class="bg-surface rounded-2xl p-6 text-center">
-                        <img src="https://img.youtube.com/vi/ru1sYQO4Mvw/maxresdefault.jpg" alt=" #ASHTAG Thumbnail" class="w-full h-48 object-cover rounded-lg mb-4" 
+                        <img src="/assets/music/cover-art-2.jpg" alt="Album Art 2" class="w-full h-48 object-cover rounded-lg mb-4" 
                         onerror="const fb = document.createElement('div'); fb.className = 'w-full h-48 object-cover rounded-lg mb-4 bg-base text-dim p-4 flex items-center justify-center text-center italic'; fb.innerHTML = 'Fact: My first official music video, filmed at Atlanta’s historic Georgian Terrace Luxury Hotel.'; this.parentNode.replaceChild(fb, this);">
                         <h4 class="text-xl font-bold mb-2">#ASHTAG</h4>
                         <p class="text-dim mb-4">Hip-hop × Soul × Experimental.</p>
@@ -708,9 +703,9 @@
                             Listen on YouTube
                         </a>
                     </div>
-                    <!-- Song 3 -->
+                    <!-- Placeholder for Song 3 -->
                     <div class="bg-surface rounded-2xl p-6 text-center">
-                        <img src="https://img.youtube.com/vi/nnW_YHSn4DQ/maxresdefault.jpg" alt="Pinky Ring Thumbnail" class="w-full h-48 object-cover rounded-lg mb-4" 
+                        <img src="/assets/music/cover-art-3.jpg" alt="Album Art 3" class="w-full h-48 object-cover rounded-lg mb-4" 
                         onerror="const fb = document.createElement('div'); fb.className = 'w-full h-48 object-cover rounded-lg mb-4 bg-base text-dim p-4 flex items-center justify-center text-center italic'; fb.innerHTML = 'Fact: My first-ever song—marking the beginning of my journey as a writer, artist, and self-producer.'; this.parentNode.replaceChild(fb, this);">
                         <h4 class="text-xl font-bold mb-2">Pinky Ring</h4>
                         <p class="text-dim mb-4">Rhythm with intention.</p>
