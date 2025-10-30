@@ -196,11 +196,17 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: var(--color-accent);
+            background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+            background-size: 200% 100%;
             transition: width 0.3s ease;
+            animation: trail-flow 1.5s ease-in-out infinite;
         }
         .nav-link:hover::after {
             width: 100%;
+        }
+        @keyframes trail-flow {
+            0%, 100% { background-position: 200% 0; }
+            50% { background-position: -200% 0; }
         }
         
         /* Page Section Scroll-Triggered Fade-in (Enhanced with slide-up) */
@@ -221,7 +227,11 @@
         }
         .project-card:hover {
             transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 191, 255, 0.2);
+            animation: silk-pulse 2s ease-in-out infinite;
+        }
+        @keyframes silk-pulse {
+            0%, 100% { box-shadow: 0 15px 30px rgba(0,0,0,0.3), 0 0 20px rgba(0,191,255,0.15); }
+            50% { box-shadow: 0 15px 30px rgba(0,0,0,0.3), 0 0 30px rgba(0,191,255,0.25); }
         }
         
         /* Modal Backdrop */
@@ -267,15 +277,11 @@
             background-color: var(--color-base);
             border-color: var(--color-accent);
             transform: translateY(-8px);
-            animation: pulse-glow 1.5s infinite;
+            animation: silk-pulse 2s ease-in-out infinite;
         }
         .edge-card:hover .edge-icon {
             color: var(--color-accent);
             transform: scale(1.1) rotate(5deg);
-        }
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 10px rgba(0, 191, 255, 0.1); }
-            50% { box-shadow: 0 0 20px rgba(0, 191, 255, 0.3); }
         }
         
         /* Timeline Bar (Enhanced with draw-in line and pulse dot) */
@@ -504,7 +510,7 @@
                 <p class="text-xl text-dim max-w-3xl mx-auto">
                     I build with the mind of an engineer and the eye of an artist. Every pixel, sound, and line of code tells the story of becoming unstoppable.
                 </p>
-                <a href="/assets/resume/Tae_ShaMonte_Knight_Resume_v2025.pdf" target="_blank" rel="noopener noreferrer" class="inline-block bg-accent text-base font-bold px-8 py-4 rounded-lg mt-8 transition-transform duration-300 hover:scale-105 hover:bg-accent-hover">
+                <a href="#projects" class="inline-block bg-accent text-base font-bold px-8 py-4 rounded-lg mt-8 transition-transform duration-300 hover:scale-105 hover:bg-accent-hover">
                     View My Work
                 </a>
             </div>
@@ -615,7 +621,7 @@
                             <span class="text-sm font-semibold text-accent uppercase tracking-wider">Wattpad Bestseller</span>
                             <h4 class="text-2xl font-bold mt-2 mb-3">If He Wants To</h4>
                             <p class="text-dim mb-4">A story of love, loss, and resilience. Based on a true story, this novel has touched thousands of readers, ranking in multiple categories.</p>
-                            <a href="https://www.wattpad.com/story/YOUR_STORY_ID" target="_blank" rel="noopener noreferrer" class="inline-block border-2 border-accent text-accent font-bold px-6 py-3 rounded-lg transition-colors duration-300 hover:bg-accent hover:text-base">
+                            <a href="https://www.wattpad.com/story/403105444-if-he-wants-to-based-on-a-true-story" target="_blank" rel="noopener noreferrer" class="inline-block border-2 border-accent text-accent font-bold px-6 py-3 rounded-lg transition-colors duration-300 hover:bg-accent hover:text-base">
                                 Read on Wattpad
                             </a>
                         </div>
@@ -682,30 +688,30 @@
             <div class="mb-20">
                 <h3 class="text-3xl font-bold text-center mb-10">The Rhythm Behind the Code</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Placeholder for Song 1 -->
+                    <!-- Song 1: YAMAGUCHI -->
                     <div class="bg-surface rounded-2xl p-6 text-center">
-                        <img src="/assets/music/cover-art-1.jpg" alt="Album Art 1" class="w-full h-48 object-cover rounded-lg mb-4" 
-                        onerror="const fb = document.createElement('div'); fb.className = 'w-full h-48 object-cover rounded-lg mb-4 bg-base text-dim p-4 flex items-center justify-center text-center italic'; fb.innerHTML = 'Fact: My first lyrical piece—crafted to merge wordplay and rhythm into cinematic storytelling.'; this.parentNode.replaceChild(fb, this);">
+                        <img src="https://img.youtube.com/vi/MYTpBHiju1Q/maxresdefault.jpg" alt="YAMAGUCHI - YouTube Thumbnail" class="w-full h-48 object-cover rounded-lg mb-4" 
+                        onerror="this.src='https://img.youtube.com/vi/MYTpBHiju1Q/hqdefault.jpg'; const fb = document.createElement('div'); fb.className = 'w-full h-48 object-cover rounded-lg mb-4 bg-base text-dim p-4 flex items-center justify-center text-center italic'; fb.innerHTML = 'Fact: My first lyrical piece—crafted to merge wordplay and rhythm into cinematic storytelling.'; this.parentNode.replaceChild(fb, this);">
                         <h4 class="text-xl font-bold mb-2">YAMAGUCHI</h4>
                         <p class="text-dim mb-4">Cinematic energy, narrative emotion.</p>
                         <a href="https://youtu.be/MYTpBHiju1Q?si=QJXHkar7-Yjovba0" target="_blank" rel="noopener noreferrer" class="inline-block border-2 border-accent text-accent font-bold px-6 py-3 rounded-lg transition-colors duration-300 hover:bg-accent hover:text-base">
                             Listen on YouTube
                         </a>
                     </div>
-                    <!-- Placeholder for Song 2 -->
+                    <!-- Song 2: #ASHTAG -->
                     <div class="bg-surface rounded-2xl p-6 text-center">
-                        <img src="/assets/music/cover-art-2.jpg" alt="Album Art 2" class="w-full h-48 object-cover rounded-lg mb-4" 
-                        onerror="const fb = document.createElement('div'); fb.className = 'w-full h-48 object-cover rounded-lg mb-4 bg-base text-dim p-4 flex items-center justify-center text-center italic'; fb.innerHTML = 'Fact: My first official music video, filmed at Atlanta’s historic Georgian Terrace Luxury Hotel.'; this.parentNode.replaceChild(fb, this);">
+                        <img src="https://img.youtube.com/vi/ru1sYQO4Mvw/maxresdefault.jpg" alt="#ASHTAG - YouTube Thumbnail" class="w-full h-48 object-cover rounded-lg mb-4" 
+                        onerror="this.src='https://img.youtube.com/vi/ru1sYQO4Mvw/hqdefault.jpg'; const fb = document.createElement('div'); fb.className = 'w-full h-48 object-cover rounded-lg mb-4 bg-base text-dim p-4 flex items-center justify-center text-center italic'; fb.innerHTML = 'Fact: My first official music video, filmed at Atlanta’s historic Georgian Terrace Luxury Hotel.'; this.parentNode.replaceChild(fb, this);">
                         <h4 class="text-xl font-bold mb-2">#ASHTAG</h4>
                         <p class="text-dim mb-4">Hip-hop × Soul × Experimental.</p>
                         <a href="https://www.youtube.com/watch?v=ru1sYQO4Mvw" target="_blank" rel="noopener noreferrer" class="inline-block border-2 border-accent text-accent font-bold px-6 py-3 rounded-lg transition-colors duration-300 hover:bg-accent hover:text-base">
                             Listen on YouTube
                         </a>
                     </div>
-                    <!-- Placeholder for Song 3 -->
+                    <!-- Song 3: Pinky Ring -->
                     <div class="bg-surface rounded-2xl p-6 text-center">
-                        <img src="/assets/music/cover-art-3.jpg" alt="Album Art 3" class="w-full h-48 object-cover rounded-lg mb-4" 
-                        onerror="const fb = document.createElement('div'); fb.className = 'w-full h-48 object-cover rounded-lg mb-4 bg-base text-dim p-4 flex items-center justify-center text-center italic'; fb.innerHTML = 'Fact: My first-ever song—marking the beginning of my journey as a writer, artist, and self-producer.'; this.parentNode.replaceChild(fb, this);">
+                        <img src="https://img.youtube.com/vi/nnW_YHSn4DQ/maxresdefault.jpg" alt="Pinky Ring - YouTube Thumbnail" class="w-full h-48 object-cover rounded-lg mb-4" 
+                        onerror="this.src='https://img.youtube.com/vi/nnW_YHSn4DQ/hqdefault.jpg'; const fb = document.createElement('div'); fb.className = 'w-full h-48 object-cover rounded-lg mb-4 bg-base text-dim p-4 flex items-center justify-center text-center italic'; fb.innerHTML = 'Fact: My first-ever song—marking the beginning of my journey as a writer, artist, and self-producer.'; this.parentNode.replaceChild(fb, this);">
                         <h4 class="text-xl font-bold mb-2">Pinky Ring</h4>
                         <p class="text-dim mb-4">Rhythm with intention.</p>
                         <a href="https://youtu.be/nnW_YHSn4DQ?si=IFKgUGlqkYLta9oA" target="_blank" rel="noopener noreferrer" class="inline-block border-2 border-accent text-accent font-bold px-6 py-3 rounded-lg transition-colors duration-300 hover:bg-accent hover:text-base">
@@ -775,9 +781,35 @@
                     </div>
                 </div>
             </div>
+
+            <!-- ACCOMPLISHMENTS SECTION -->
+            <div class="mt-20">
+                <h3 class="text-3xl font-bold text-center mb-10">Accomplishments & Recognition</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-surface rounded-2xl p-8 text-center">
+                        <a href="https://badgr.com/public/assertions/zTADwOcSTkSp_XzwxHjpYA?identity__email=sknight29@student.gsu.edu" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/badges/gsu-badge.png" alt="GSU Digital Badge" class="w-24 h-24 mx-auto mb-4 rounded-full shadow-lg"
+                            onerror="this.src='https://img.youtube.com/vi/HOvopfXhw04/maxresdefault.jpg'">
+                            <p class="text-lg font-bold text-accent">GSU Digital Badges</p>
+                        </a>
+                    </div>
+                    <div class="bg-surface rounded-2xl p-8 text-center">
+                        <a href="https://meritpages.com/SHAMONTE" target="_blank" rel="noopener noreferrer">
+                            <img src="https://meritpages.com/assets/logo.png" alt="GSU Merit Page" class="w-24 h-24 mx-auto mb-4 rounded-full shadow-lg">
+                            <p class="text-lg font-bold text-accent">GSU Merit Page</p>
+                        </a>
+                    </div>
+                    <div class="bg-surface rounded-2xl p-8 text-center">
+                        <a href="https://www.youtube.com/watch?v=HOvopfXhw04" target="_blank" rel="noopener noreferrer">
+                            <img src="https://img.youtube.com/vi/HOvopfXhw04/maxresdefault.jpg" alt="Wellroot Advocate" class="w-24 h-24 mx-auto mb-4 rounded-full shadow-lg">
+                            <p class="text-lg font-bold text-accent">Wellroot Foster Youth Advocate</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
             
             <!-- Skills & Resume Download -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-20">
                 <!-- Column 1: Skills -->
                 <div class="bg-surface rounded-2xl p-8">
                     <h3 class="text-2xl font-bold mb-6 text-accent">Technical Skills</h3>
@@ -1182,314 +1214,4 @@
             lucide.createIcons();
 
             // --- Footer Year ---
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-
-            // --- Theme Toggle ---
-            const themeToggle = document.getElementById('theme-toggle');
-            const themeIconLight = document.getElementById('theme-icon-light');
-            const themeIconDark = document.getElementById('theme-icon-dark');
-            const htmlEl = document.documentElement;
-
-            const setDark = () => {
-                htmlEl.classList.add('dark');
-                htmlEl.classList.remove('light');
-                themeIconLight.classList.add('hidden');
-                themeIconDark.classList.remove('hidden');
-                localStorage.setItem('theme', 'dark');
-            };
-
-            const setLight = () => {
-                htmlEl.classList.add('light');
-                htmlEl.classList.remove('dark');
-                themeIconDark.classList.add('hidden');
-                themeIconLight.classList.remove('hidden');
-                localStorage.setItem('theme', 'light');
-            };
-
-            themeToggle.addEventListener('click', () => {
-                if (htmlEl.classList.contains('dark')) {
-                    setLight();
-                } else {
-                    setDark();
-                }
-            });
-
-            // Set initial theme
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'light') {
-                setLight();
-            } else {
-                setDark(); // Default to dark
-            }
-
-            // --- Mobile Menu ---
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // --- Page Navigation ---
-            const navLinks = document.querySelectorAll('.nav-link');
-            const pageSections = document.querySelectorAll('.page-section');
-            const mobileMenuLinks = document.querySelectorAll('#mobile-menu .nav-link');
-
-            const showPage = (pageId) => {
-                // Find the target section
-                const targetSection = document.getElementById(pageId);
-                
-                // If it's the home page, just scroll to top
-                if (pageId === 'home' && targetSection) {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
-                
-                // Hide all sections
-                pageSections.forEach(section => {
-                    section.classList.toggle('hidden', section.id !== pageId);
-                });
-                
-                // Update nav link active states
-                navLinks.forEach(link => {
-                    link.classList.toggle('active', link.dataset.navlink === pageId);
-                });
-                
-                // Close mobile menu on navigation
-                mobileMenu.classList.add('hidden');
-                
-                // If not home, scroll to the section (removes offset)
-                if (pageId !== 'home' && targetSection) {
-                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-                
-                // Trigger visibility for the new section
-                if(targetSection) {
-                    targetSection.classList.add('is-visible');
-                }
-            };
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const pageId = link.dataset.navlink;
-                    if (pageId) {
-                        // Update URL hash
-                        window.location.hash = pageId;
-                        // Show the page (function handles scrolling)
-                        showPage(pageId);
-                    }
-                });
-            });
-            
-            // --- Intersection Observer for Scroll Animations ---
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        // Optional: unobserve after it's visible so it doesn't re-animate
-                        // observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1 // Trigger when 10% of the element is visible
-            });
-
-            // Observe all page sections
-            pageSections.forEach(section => {
-                observer.observe(section);
-            });
-
-            // Handle initial page load from hash
-            const initialPageId = window.location.hash.substring(1) || 'home';
-            showPage(initialPageId);
-            
-            // Explicitly make the initial section visible
-            const initialSection = document.getElementById(initialPageId);
-            if (initialSection) {
-                initialSection.classList.add('is-visible');
-            }
-
-            // --- Project Rendering ---
-            const projectGrid = document.getElementById('project-grid');
-            const projectFilters = document.querySelectorAll('.project-filter');
-            
-            const renderProjects = (filter = 'all') => {
-                if (!projectGrid) return;
-                projectGrid.innerHTML = '';
-                
-                const filteredProjects = projectsData.filter(project => 
-                    filter === 'all' || project.category.toLowerCase() === filter.toLowerCase()
-                );
-                
-                if (filteredProjects.length === 0) {
-                    projectGrid.innerHTML = `<p class="text-dim col-span-full text-center">No projects found in this category.</p>`;
-                    return;
-                }
-                
-                filteredProjects.forEach(project => {
-                    const techHtml = project.tech.map(t => `<span class="bg-base text-dim text-xs font-medium px-3 py-1 rounded-full">${t}</span>`).join(' ');
-                    
-                    const cardHtml = `
-                        <div class="project-card rounded-2xl overflow-hidden shadow-lg cursor-pointer" data-project-id="${project.id}">
-                            <img src="${project.image}" alt="${project.title}" class="w-full h-48 object-cover" 
-                            onerror="const fb = document.createElement('div'); fb.className = 'w-full h-48 object-cover bg-surface text-dim p-4 flex items-center justify-center text-center italic'; fb.innerHTML = '${project.fact.replace(/'/g, "\\'")}'; this.parentNode.replaceChild(fb, this);">
-                            <div class="p-6">
-                                <h3 class="text-2xl font-bold mb-2 text-main">${project.title}</h3>
-                                <p class="text-dim mb-4">${project.tagline}</p>
-                                <div class="flex flex-wrap gap-2">
-                                    ${techHtml}
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    projectGrid.innerHTML += cardHtml;
-                });
-                
-                // Add click listeners to new cards
-                document.querySelectorAll('.project-card').forEach(card => {
-                    card.addEventListener('click', () => {
-                        openModal(card.dataset.projectId);
-                    });
-                });
-            };
-            
-            projectFilters.forEach(button => {
-                button.addEventListener('click', () => {
-                    const filter = button.dataset.filter;
-                    
-                    // Update active filter style
-                    projectFilters.forEach(btn => btn.classList.remove('active-filter', 'bg-accent', 'text-base'));
-                    projectFilters.forEach(btn => btn.classList.add('bg-surface', 'text-main'));
-                    button.classList.add('active-filter', 'bg-accent', 'text-base');
-                    button.classList.remove('bg-surface', 'text-main');
-                    
-                    renderProjects(filter);
-                });
-            });
-
-            // --- Modal Logic (v3 - Checklist Update) ---
-            const modal = document.getElementById('project-modal');
-            const modalBackdrop = document.getElementById('modal-backdrop');
-            const modalClose = document.getElementById('modal-close');
-            const modalDynamicContent = document.getElementById('modal-dynamic-content');
-
-            const openModal = (projectId) => {
-                const project = projectsData.find(p => p.id === projectId);
-                if (!project) return;
-
-                const techHtml = project.tech.map(t => `<span class="bg-base text-dim text-sm font-medium px-3 py-1 rounded-full">${t}</span>`).join(' ');
-                const featuresHtml = project.features.map(f => `
-                    <div class="mb-4">
-                        <h5 class="text-lg font-semibold text-main">${f.name}</h5>
-                        <p class="text-dim">${f.desc}</p>
-                    </div>
-                `).join('');
-
-                // Render "Impact"
-                const impactHtml = project.impact ? Object.entries(project.impact).map(([key, value]) => {
-                    if (!value) return '';
-                    return `
-                        <div class="bg-base rounded-lg p-4 text-center">
-                            <p class="text-2xl font-bold text-accent">${value}</p>
-                            <p class="text-sm text-dim uppercase tracking-wider">${key}</p>
-                        </div>
-                    `;
-                }).join('') : '';
-
-                // Create screenshot gallery
-                const screenshotsHtml = project.screenshots.map((src, index) => `
-                    <img src="${src}" alt="${project.title} screenshot ${index + 1}" class="w-full h-auto object-contain rounded-lg mb-4" 
-                    onerror="const fb = document.createElement('div'); fb.className = 'w-full h-64 object-contain rounded-lg mb-4 bg-base text-dim p-4 flex items-center justify-center text-center italic'; fb.innerHTML = '${project.fact.replace(/'/g, "\\'")}'; this.parentNode.replaceChild(fb, this);">
-                `).join('');
-
-                // Create links
-                const linksHtml = `
-                    <div class="flex flex-wrap gap-4 mt-8">
-                        ${project.links.live ? `<a href="${project.links.live}" target="_blank" class="inline-block bg-accent text-base font-bold px-6 py-3 rounded-lg transition-transform duration-300 hover:scale-105 hover:bg-accent-hover">View Live Site</a>` : ''}
-                        ${project.links.github ? `<a href="${project.links.github}" target="_blank" class="inline-block border-2 border-accent text-accent font-bold px-6 py-3 rounded-lg transition-colors duration-300 hover:bg-accent hover:text-base">View on GitHub</a>` : ''}
-                        ${project.links.instagram ? `<a href="${project.links.instagram}" target="_blank" class="inline-block border-2 border-accent text-accent font-bold px-6 py-3 rounded-lg transition-colors duration-300 hover:bg-accent hover:text-base">View on Instagram</a>` : ''}
-                        ${project.demo ? `<a href="${project.demo}" target="_blank" class="inline-block border-2 border-dim text-dim font-bold px-6 py-3 rounded-lg transition-colors duration-300 hover:border-accent hover:text-accent">View Demo Video</a>` : ''}
-                        ${project.readmeUrl ? `<a href="${project.readmeUrl}" target="_blank" class="inline-block border-2 border-dim text-dim font-bold px-6 py-3 rounded-lg transition-colors duration-300 hover:border-accent hover:text-accent">Read the README</a>` : ''}
-                    </div>
-                `;
-
-                modalDynamicContent.innerHTML = `
-                    <h2 class="text-3xl md:text-4xl font-extrabold mb-2 text-accent">${project.title}</h2>
-                    <p class="text-lg text-dim mb-4">${project.role}  •  ${project.date}</p>
-                    
-                    <div class="flex flex-wrap gap-2 mb-8">
-                        ${techHtml}
-                    </div>
-
-                    ${impactHtml ? `
-                    <h4 class="text-2xl font-bold mb-4 text-main">Impact & Analytics</h4>
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                        ${impactHtml}
-                    </div>` : ''}
-                    
-                    <h4 class="text-2xl font-bold mb-3 text-main">The Problem</h4>
-                    <p class="text-dim mb-6 leading-relaxed">${project.problem}</p>
-                    
-                    <h4 class="text-2xl font-bold mb-3 text-main">The Solution</h4>
-                    <p class="text-dim mb-8 leading-relaxed">${project.description}</p>
-                    
-                    ${featuresHtml ? `
-                    <h4 class="text-2xl font-bold mb-6 text-main">Key Features</h4>
-                    ${featuresHtml}` : ''}
-
-                    ${project.howToRun ? `
-                    <h4 class="text-2xl font-bold mb-6 mt-8 text-main">How to Run</h4>
-                    <pre class="bg-base p-4 rounded-lg text-dim text-sm overflow-x-auto mb-6"><code>${project.howToRun}</code></pre>
-                    ` : ''}
-                    
-                    ${screenshotsHtml ? `
-                    <h4 class="text-2xl font-bold mb-6 mt-8 text-main">Gallery</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        ${screenshotsHtml}
-                    </div>
-                    ` : ''}
-                    
-                    ${linksHtml}
-                `;
-                
-                modal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-                
-                // Scroll modal content to top
-                const modalContent = document.getElementById('modal-content-container');
-                if (modalContent) modalContent.scrollTop = 0;
-
-                // Trigger modal content fade-in
-                setTimeout(() => {
-                    modalDynamicContent.classList.add('visible');
-                }, 100);
-            };
-
-            const closeModal = () => {
-                modal.classList.add('hidden');
-                document.body.style.overflow = 'auto';
-                modalDynamicContent.classList.remove('visible');
-            };
-
-            modalClose.addEventListener('click', closeModal);
-            modalBackdrop.addEventListener('click', closeModal);
-
-            // --- Timeline Animation Trigger ---
-            const timelineSteps = document.querySelectorAll('.timeline-step');
-            const timelineObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            timelineSteps.forEach(step => timelineObserver.observe(step));
-
-            // --- Initial Render ---
-            renderProjects();
-        });
-    </script>
-</body>
-</html>
-
-
+            document
