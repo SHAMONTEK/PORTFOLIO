@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Core Meta Tags (v3 - Checklist Update) -->
-    <title>ShaMonte 'Tae' Knight – CS Engineer & UI/UX Designer</title>
-    <meta name="description" content="Portfolio of ShaMonte 'Tae' Knight, a multi-disciplined CS Engineer, UI/UX Designer, and Creative Technologist at GSU. Fusing AI, security, and human-centered design. From foster care to tech innovator.">
-    <meta name="keywords" content="Tae Knight, ShaMonte Knight, CS Engineer, UI/UX Designer, Portfolio, Georgia State University, PhishRx, Tracks, Music Threads, Developer, Designer, Product Thinking, AI Safety, JavaFX, BandLab, Wattpad, Foster Youth Advocate">
-    <meta name="author" content="ShaMonte 'Tae' Knight">
+    <!-- Core Meta Tags (v4 - SHAMONTE KNIGHT) -->
+    <title>SHAMONTE KNIGHT – CS Engineer & UI/UX Designer</title>
+    <meta name="description" content="Portfolio of SHAMONTE KNIGHT, a multi-disciplined CS Engineer, UI/UX Designer, and Creative Technologist at GSU. Fusing AI, security, and human-centered design. From foster care to tech innovator.">
+    <meta name="keywords" content="Tae Knight, SHAMONTE KNIGHT, CS Engineer, UI/UX Designer, Portfolio, Georgia State University, PhishRx, Tracks, Music Threads, Developer, Designer, Product Thinking, AI Safety, JavaFX, BandLab, Wattpad, Foster Youth Advocate">
+    <meta name="author" content="SHAMONTE KNIGHT">
     
     <!-- OpenGraph & Twitter Tags (v3) -->
-    <meta property="og:title" content="ShaMonte 'Tae' Knight – CS Engineer & UI/UX Designer">
+    <meta property="og:title" content="SHAMONTE KNIGHT – CS Engineer & UI/UX Designer">
     <meta property="og:description" content="Multi-disciplined CS Engineer & UI/UX Designer. Builds security tools (PhishRx), reading tools (Tracks), and creative music platforms.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://shamontek.github.io">
     <meta property="og:image" content="https://shamontek.github.io/og-hero.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <!-- Removed Twitter handle as it wasn't in the final checklist -->
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Structured Data (JSON-LD) (v3 - Checklist Update) -->
+    <!-- Structured Data (JSON-LD) (v4 - Link Fixes) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -76,11 +75,11 @@
     </script>
 
     <!-- 
-      CUSTOM SITE METADATA (v3 - Checklist Update)
+      CUSTOM SITE METADATA (v4 - Name/Link Fixes)
     -->
     <script type="application/json" id="site-metadata">
     {
-      "displayName": "ShaMonte 'Tae' Knight",
+      "displayName": "SHAMONTE KNIGHT",
       "preferredName": "Tae",
       "age": 24,
       "location": "Atlanta, GA, USA",
@@ -97,7 +96,7 @@
       "availableFor": ["internship (summer 2026)", "part-time contract", "collaborations"],
       "contactMethods": {
         "email": "knight.shamonte@gmail.com",
-        "linkedin": "https://www.linkedin.com/in/sha-monte-knight",
+        "linkedin": "https://www.linkedin.com/in/shamonte",
         "handshake": "https://gsu.joinhandshake.com/stu/users/YOUR_ID"
       },
       "projectsIndex": ["phishrx", "ems-javafx", "tracks", "music-threads", "actors", "vinchii-dance", "tipsy-mixology"],
@@ -118,18 +117,18 @@
     </script>
 
     <!-- 
-      Custom Styles & Brand Palette (v2)
+      Custom Styles & Brand Palette (v4 - Added Hero Animations)
     -->
     <style>
         :root {
             /* BRAND PALETTE (v2): Grayscale base + Matte/Neon Blue accent */
-            --color-base: #0D0D0D;       /* Grayscale base */
+            --color-base: #0D0D0D;      /* Grayscale base */
             --color-surface: #1A1A1A;  /* Lighter for cards/nav */
-            --color-text: #E0E0E0;       /* Main text - elegant & readable */
-            --color-text-dim: #888888;   /* Dimmer text for sub-headlines */
+            --color-text: #E0E0E0;      /* Main text - elegant & readable */
+            --color-text-dim: #888888;    /* Dimmer text for sub-headlines */
             
             /* == YOUR ACCENT (v2) == */
-            --color-accent: #00BFFF;     /* Vibrant Blue (DeepSkyBlue) */
+            --color-accent: #00BFFF;      /* Vibrant Blue (DeepSkyBlue) */
             --color-accent-hover: #00C2FF; /* Slightly lighter/brighter */
         }
         
@@ -402,12 +401,33 @@
             width: 100%;
             height: 100%;
         }
+
+        /* NEW: Hero Text Animations */
+        .hero-text-h1 {
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.2s forwards;
+        }
+        .hero-text-p {
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
     </style>
 </head>
 <body class="bg-base text-main">
 
     <!-- 
-      HEADER & NAVIGATION (v3 - Checklist Update)
+      HEADER & NAVIGATION (v4 - Link Fixes)
     -->
     <header class="bg-surface sticky top-0 z-40 w-full shadow-md">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -432,10 +452,10 @@
                     <a href="https://github.com/SHAMONTEK" target="_blank" rel="noopener noreferrer" class="text-dim hover:text-accent" title="GitHub">
                         <i data-lucide="github" class="w-5 h-5"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/sha-monte-knight" target="_blank" rel="noopener noreferrer" class="text-dim hover:text-accent" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/shamonte" target="_blank" rel="noopener noreferrer" class="text-dim hover:text-accent" title="LinkedIn">
                         <i data-lucide="linkedin" class="w-5 h-5"></i>
                     </a>
-                    <a href="https://www.youtube.com/@TaeKnight" target="_blank" rel="noopener noreferrer" class="text-dim hover:text-accent" title="YouTube">
+                    <a href="https://www.youtube.com/@SHAMONTEk" target="_blank" rel="noopener noreferrer" class="text-dim hover:text-accent" title="YouTube">
                         <i data-lucide="youtube" class="w-5 h-5"></i>
                     </a>
                     <a href="https://www.instagram.com/tipsytipsy._/" target="_blank" rel="noopener noreferrer" class="text-dim hover:text-accent" title="Instagram (Mixology)">
@@ -468,7 +488,7 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         
         <!-- 
-          SECTION: HOME (HERO v3 - Checklist Update)
+          SECTION: HOME (HERO v4 - Name & Animation Update)
         -->
         <section id="home" class="page-section">
             <div class="relative h-[60vh] md:h-[70vh] rounded-2xl overflow-hidden">
@@ -478,7 +498,7 @@
                 <div class="absolute inset-0 hero-image-container">
                     <img 
                         src="/assets/hero/hero-1.jpg" 
-                        alt="Tae Knight, CS Engineer and UI/UX Designer" 
+                        alt="SHAMONTE KNIGHT, CS Engineer and UI/UX Designer" 
                         class="w-full h-full object-cover"
                         onerror="const fb = document.createElement('div'); fb.className = 'w-full h-full bg-surface text-dim p-6 flex items-center justify-center text-center italic text-lg'; fb.innerHTML = 'Fact: Self-taught designer, developer, and multi-disciplinary creative, building tools and art that fuse intelligence, design, and storytelling.'; this.parentNode.replaceChild(fb, this);"
                     >
@@ -486,18 +506,18 @@
                     <div class="absolute inset-0 bg-black opacity-40"></div>
                 </div>
                 
-                <!-- Hero Content (v3) -->
+                <!-- Hero Content (v4 - Animated) -->
                 <div class="relative z-10 h-full flex flex-col justify-center items-center text-center text-white p-8">
-                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4">
-                        ShaMonte "Tae" Knight
+                    <h1 class="hero-text-h1 text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4">
+                        SHAMONTE KNIGHT
                     </h1>
-                    <p class="text-xl md:text-3xl font-medium text-shadow-lg">
+                    <p class="hero-text-p text-xl md:text-3xl font-medium text-shadow-lg">
                         CS Engineer <span class="text-accent mx-2">|</span> UI/UX Designer <span class="text-accent mx-2">|</span> Creative Technologist
                     </p>
                 </div>
             </div>
             
-            <!-- Scroll-reveal content (v3) -->
+            <!-- Scroll-reveal content (v4 - Button & Arrow Update) -->
             <div class="mt-12 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">
                     <span class="text-accent">Weaponizing</span> intelligence, creativity, and resilience.
@@ -505,10 +525,13 @@
                 <p class="text-xl text-dim max-w-3xl mx-auto">
                     I build with the mind of an engineer and the eye of an artist. Every pixel, sound, and line of code tells the story of becoming unstoppable.
                 </p>
-                <a href="#projects" class="inline-block bg-accent text-base font-bold px-8 py-4 rounded-lg mt-8 transition-transform duration-300 hover:scale-105 hover:bg-accent-hover">
-    View My Work
-</a>
+                <a href="#projects" data-navlink="projects" class="nav-link inline-block bg-accent text-base font-bold px-8 py-4 rounded-lg mt-8 transition-transform duration-300 hover:scale-105 hover:bg-accent-hover">
+                    View Projects
                 </a>
+                <!-- NEW ANIMATED ARROW -->
+                <div class="mt-12 text-accent">
+                    <i data-lucide="arrow-down" class="w-8 h-8 mx-auto animate-bounce"></i>
+                </div>
             </div>
         </section>
 
@@ -672,7 +695,7 @@
         </section>
 
         <!-- 
-          SECTION: MUSIC & CREATIVE (v3 - Renamed & Updated)
+          SECTION: MUSIC & CREATIVE (v4 - Thumbnail Fixes)
         -->
         <section id="creative" class="page-section hidden">
             <div class="text-center mb-16">
@@ -684,9 +707,9 @@
             <div class="mb-20">
                 <h3 class="text-3xl font-bold text-center mb-10">The Rhythm Behind the Code</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Placeholder for Song 1 -->
+                    <!-- Song 1 (Thumbnail Fixed) -->
                     <div class="bg-surface rounded-2xl p-6 text-center">
-                        <img src="/assets/music/cover-art-1.jpg" alt="Album Art 1" class="w-full h-48 object-cover rounded-lg mb-4" 
+                        <img src="https://img.youtube.com/vi/MYTpBHiju1Q/maxresdefault.jpg" alt="Album Art 1 - YAMAGUCHI" class="w-full h-48 object-cover rounded-lg mb-4" 
                         onerror="const fb = document.createElement('div'); fb.className = 'w-full h-48 object-cover rounded-lg mb-4 bg-base text-dim p-4 flex items-center justify-center text-center italic'; fb.innerHTML = 'Fact: My first lyrical piece—crafted to merge wordplay and rhythm into cinematic storytelling.'; this.parentNode.replaceChild(fb, this);">
                         <h4 class="text-xl font-bold mb-2">YAMAGUCHI</h4>
                         <p class="text-dim mb-4">Cinematic energy, narrative emotion.</p>
@@ -694,9 +717,9 @@
                             Listen on YouTube
                         </a>
                     </div>
-                    <!-- Placeholder for Song 2 -->
+                    <!-- Song 2 (Thumbnail Fixed) -->
                     <div class="bg-surface rounded-2xl p-6 text-center">
-                        <img src="/assets/music/cover-art-2.jpg" alt="Album Art 2" class="w-full h-48 object-cover rounded-lg mb-4" 
+                        <img src="https://img.youtube.com/vi/ru1sYQO4Mvw/maxresdefault.jpg" alt="Album Art 2 - #ASHTAG" class="w-full h-48 object-cover rounded-lg mb-4" 
                         onerror="const fb = document.createElement('div'); fb.className = 'w-full h-48 object-cover rounded-lg mb-4 bg-base text-dim p-4 flex items-center justify-center text-center italic'; fb.innerHTML = 'Fact: My first official music video, filmed at Atlanta’s historic Georgian Terrace Luxury Hotel.'; this.parentNode.replaceChild(fb, this);">
                         <h4 class="text-xl font-bold mb-2">#ASHTAG</h4>
                         <p class="text-dim mb-4">Hip-hop × Soul × Experimental.</p>
@@ -704,9 +727,9 @@
                             Listen on YouTube
                         </a>
                     </div>
-                    <!-- Placeholder for Song 3 -->
+                    <!-- Song 3 (Thumbnail Fixed) -->
                     <div class="bg-surface rounded-2xl p-6 text-center">
-                        <img src="/assets/music/cover-art-3.jpg" alt="Album Art 3" class="w-full h-48 object-cover rounded-lg mb-4" 
+                        <img src="https://img.youtube.com/vi/nnW_YHSn4DQ/maxresdefault.jpg" alt="Album Art 3 - Pinky Ring" class="w-full h-48 object-cover rounded-lg mb-4" 
                         onerror="const fb = document.createElement('div'); fb.className = 'w-full h-48 object-cover rounded-lg mb-4 bg-base text-dim p-4 flex items-center justify-center text-center italic'; fb.innerHTML = 'Fact: My first-ever song—marking the beginning of my journey as a writer, artist, and self-producer.'; this.parentNode.replaceChild(fb, this);">
                         <h4 class="text-xl font-bold mb-2">Pinky Ring</h4>
                         <p class="text-dim mb-4">Rhythm with intention.</p>
@@ -736,7 +759,7 @@
         </section>
 
         <!-- 
-          SECTION: RESUME & EDUCATION (v3 - Renamed & Updated)
+          SECTION: RESUME & EDUCATION (v4 - Link/Thumbnail Fixes)
         -->
         <section id="resume" class="page-section hidden">
             <div class="text-center mb-16">
@@ -778,32 +801,37 @@
                 </div>
             </div>
             
-            <!-- Accomplishments -->
+            <!-- Accomplishments (Thumbnail Fixes) -->
             <div class="mb-20">
                 <h3 class="text-3xl font-bold text-center mb-10">Accomplishments & Recognition</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="bg-surface rounded-2xl p-8 text-center">
                         <a href="https://badgr.com/public/assertions/zTADwOcSTkSp_XzwxHjpYA?identity__email=sknight29@student.gsu.edu" target="_blank" rel="noopener noreferrer">
-                            <img src="https://img.youtube.com/vi/HOvopfXhw04/maxresdefault.jpg" alt="GSU Badges" class="w-24 h-24 mx-auto mb-4 rounded-full shadow-lg">
+                            <!-- NEW ICON PLACEHOLDER for GSU Badges -->
+                            <div class="w-24 h-24 mx-auto mb-4 rounded-full shadow-lg bg-base flex items-center justify-center">
+                                <i data-lucide="award" class="w-12 h-12 text-accent"></i>
+                            </div>
                             <p class="text-lg font-bold text-accent">GSU Badges</p>
                         </a>
                     </div>
                     <div class="bg-surface rounded-2xl p-8 text-center">
                         <a href="https://meritpages.com/SHAMONTE" target="_blank" rel="noopener noreferrer">
-                            <img src="https://meritpages.com/assets/logo.png" alt="GSU Merit Page" class="w-24 h-24 mx-auto mb-4 rounded-full shadow-lg">
+                            <img src="https://meritpages.com/assets/logo.png" alt="GSU Merit Page" class="w-24 h-24 mx-auto mb-4 rounded-full shadow-lg object-contain"
+                            onerror="const fb = document.createElement('div'); fb.className = 'w-24 h-24 mx-auto mb-4 rounded-full shadow-lg bg-base flex items-center justify-center'; fb.innerHTML = '<i data-lucide=\'award\' class=\'w-12 h-12 text-accent\'></i>'; this.parentNode.replaceChild(fb, this);">
                             <p class="text-lg font-bold text-accent">GSU Merit Page</p>
                         </a>
                     </div>
                     <div class="bg-surface rounded-2xl p-8 text-center">
                         <a href="https://www.youtube.com/watch?v=HOvopfXhw04" target="_blank" rel="noopener noreferrer">
-                            <img src="https://img.youtube.com/vi/HOvopfXhw04/maxresdefault.jpg" alt="Wellroot Advocate" class="w-24 h-24 mx-auto mb-4 rounded-full shadow-lg">
+                            <img src="https://img.youtube.com/vi/HOvopfXhw04/maxresdefault.jpg" alt="Wellroot Advocate" class="w-24 h-24 mx-auto mb-4 rounded-full shadow-lg object-cover"
+                            onerror="const fb = document.createElement('div'); fb.className = 'w-24 h-24 mx-auto mb-4 rounded-full shadow-lg bg-base flex items-center justify-center'; fb.innerHTML = '<i data-lucide=\'heart-handshake\' class=\'w-12 h-12 text-accent\'></i>'; this.parentNode.replaceChild(fb, this);">
                             <p class="text-lg font-bold text-accent">Wellroot Foster Youth Advocate</p>
                         </a>
                     </div>
                 </div>
             </div>
             
-            <!-- Skills & Resume Download -->
+            <!-- Skills & Resume Download (Link Fix) -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                 <!-- Column 1: Skills -->
                 <div class="bg-surface rounded-2xl p-8">
@@ -834,7 +862,7 @@
                     </ul>
                 </div>
                 
-                <!-- Column 3: Badges & Links -->
+                <!-- Column 3: Badges & Links (Link Fix) -->
                 <div class="bg-surface rounded-2xl p-8">
                     <h3 class="text-2xl font-bold mb-6 text-accent">Downloads & Links</h3>
                     <p class="text-lg font-semibold mb-2">Get the full story.</p>
@@ -843,7 +871,7 @@
                     <a href="/ShaMonteKnight Resume.pdf" target="_blank" rel="noopener noreferrer" class="inline-block bg-accent text-base font-bold px-8 py-4 rounded-lg mt-8 transition-transform duration-300 hover:scale-105 hover:bg-accent-hover">
                         Download Resume (PDF)
                     </a>
-                    <a href="https://www.linkedin.com/in/sha-monte-knight" target="_blank" class="w-full text-center inline-block border-2 border-accent text-accent font-bold px-8 py-3 rounded-lg transition-colors duration-300 hover:bg-accent hover:text-base mb-4">
+                    <a href="https://www.linkedin.com/in/shamonte" target="_blank" class="w-full text-center inline-block border-2 border-accent text-accent font-bold px-8 py-3 rounded-lg transition-colors duration-300 hover:bg-accent hover:text-base mb-4">
                         View LinkedIn
                     </a>
                     <a href="https://gsu.joinhandshake.com/stu/users/YOUR_ID" target="_blank" class="w-full text-center inline-block border-2 border-dim text-dim font-bold px-8 py-3 rounded-lg transition-colors duration-300 hover:border-accent hover:text-accent">
@@ -895,20 +923,20 @@
 
     </main>
 
-    <!-- FOOTER (v3 - Checklist Update) -->
+    <!-- FOOTER (v4 - Link Fixes) -->
     <footer class="border-t border-surface mt-20 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex justify-center space-x-6 mb-6">
                 <a href="https://github.com/SHAMONTEK" target="_blank" rel="noopener noreferrer" class="text-dim hover:text-accent" title="GitHub">
                     <i data-lucide="github" class="w-6 h-6"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/sha-monte-knight" target="_blank" rel="noopener noreferrer" class="text-dim hover:text-accent" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/shamonte" target="_blank" rel="noopener noreferrer" class="text-dim hover:text-accent" title="LinkedIn">
                     <i data-lucide="linkedin" class="w-6 h-6"></i>
                 </a>
                 <a href="mailto:knight.shamonte@gmail.com" class="text-dim hover:text-accent" title="Email">
                     <i data-lucide="mail" class="w-6 h-6"></i>
                 </a>
-                <a href="https://www.youtube.com/@TaeKnight" target="_blank" rel="noopener noreferrer" class="text-dim hover:text-accent" title="YouTube">
+                <a href="https://www.youtube.com/@SHAMONTEk" target="_blank" rel="noopener noreferrer" class="text-dim hover:text-accent" title="YouTube">
                     <i data-lucide="youtube" class="w-6 h-6"></i>
                 </a>
                 <a href="https://www.bandlab.com/taeknight" target="_blank" rel="noopener noreferrer" class="text-dim hover:text-accent" title="BandLab">
@@ -1260,6 +1288,8 @@
             const navLinks = document.querySelectorAll('.nav-link');
             const pageSections = document.querySelectorAll('.page-section');
             const mobileMenuLinks = document.querySelectorAll('#mobile-menu .nav-link');
+            // Select the new "View Projects" button
+            const viewProjectsButton = document.querySelector('a[href="#projects"][data-navlink="projects"]');
 
             const showPage = (pageId) => {
                 // Find the target section
